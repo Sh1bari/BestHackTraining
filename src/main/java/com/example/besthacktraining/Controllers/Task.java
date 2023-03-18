@@ -3,7 +3,9 @@ package com.example.besthacktraining.Controllers;
 import com.example.besthacktraining.Models.*;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -73,6 +75,32 @@ public class Task {
             put(id,map.get(id));
         }});
         task.setTask("Распарсить лист");
+        return task;
+    }
+
+    @GetMapping("/6")
+    private Task6Model task6(){
+        Task6Model task = new Task6Model();
+        ArrayList<String> list = new ArrayList<>();
+        list.add("hi");
+        list.add("i");
+        list.add("am");
+        list.add("dolboeb");
+        task.setList(list);
+        task.setTask("Лень придумывать");
+        return task;
+    }
+
+    @GetMapping("/7")
+    private Task7Model task7(){
+        Task7Model task = new Task7Model();
+        String[] list = new String[4];
+        list[0] = "0 элемент";
+        list[1] = "1 элемент";
+        list[2] = "2 элемент";
+        list[3] = "3 элемент";
+        task.setList(list);
+        task.setTask("Лень придумывать");
         return task;
     }
 
