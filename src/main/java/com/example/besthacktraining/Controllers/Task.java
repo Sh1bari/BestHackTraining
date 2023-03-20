@@ -34,11 +34,11 @@ public class Task {
     }
 
     @PostMapping("/4/{string}")
-    private Task4Model task4(@PathVariable String string, @RequestParam int number){
+    private Task4Model task4(@PathVariable String string, @RequestBody ModelNumber number){
         Task4Model task = new Task4Model();
         task.setString(string);
         task.setTask("Post запрос с передачей переменной по ссылке и скрыто");
-        task.setNumber(number);
+        task.setNumber(number.getNumber());
         return task;
     }
 
