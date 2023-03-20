@@ -10,6 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Task2Model {
-    private float pow;
+    private int number;
     private String task;
 }

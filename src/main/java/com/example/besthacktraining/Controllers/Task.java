@@ -18,9 +18,9 @@ public class Task {
     }
 
     @PostMapping("/2")
-    private Task2Model task2(@RequestParam float number){
+    private Task2Model task2(@RequestParam int number){
         Task2Model task = new Task2Model();
-        task.setPow(number*number);
+        task.setNumber(number);
         task.setTask("Обычный Post запрос");
         return task;
     }
